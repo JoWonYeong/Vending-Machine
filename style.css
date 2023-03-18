@@ -1,0 +1,341 @@
+/* ----- a11y-hidden ----- */
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* ----- 변수 ----- */
+:root {
+  --main-gap: 12px;
+  --main-padding: 27px;
+  --main-radius: 5px;
+  --color-light-purple: #eae8fe;
+  --color-purple: #6327fe;
+}
+
+/* ----- reset ----- */
+
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+button,
+input,
+body {
+  padding: 0;
+  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--color-light-purple);
+}
+
+/* ----- logo ----- */
+
+.logo {
+  text-align: center;
+}
+.logo img {
+  cursor: pointer;
+  width: 386px;
+  height: 180px;
+}
+
+/* scroll */
+
+[class$='-obtained']::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+[class$='-obtained']::-webkit-scrollbar-thumb {
+  background-color: white;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 50px;
+}
+
+/* ----- Section ----- */
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 68px;
+  margin-bottom: 171px;
+}
+
+[class^='container-vending'] {
+  width: 360px;
+}
+
+/* ----- vending1 ----- */
+
+.container-vending1 {
+  background-color: white;
+  padding: 29.5px var(--main-padding);
+}
+
+.menu {
+  display: flex;
+  gap: var(--main-gap);
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 94px;
+  height: 130px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+}
+
+.card > img {
+  width: 36px;
+  height: 65px;
+}
+.card > span:nth-child(2) {
+  display: block;
+  font-size: 10px;
+  margin-top: 6px;
+}
+
+.card > span:nth-child(3) {
+  display: block;
+  width: 70px;
+  height: 22px;
+  margin: auto;
+  margin-top: 7px;
+  border-radius: 50px;
+  background-color: var(--color-purple);
+  color: white;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.card:hover {
+  box-shadow: inset 0px 0px 3px 3px var(--color-light-purple);
+}
+
+.card:active {
+  box-shadow: inset 3px 3px 0px 2px var(--color-light-purple);
+}
+
+.card.purple {
+  box-shadow: inset 0px 0px 0px 3px var(--color-purple);
+}
+
+.card.soldout {
+  position: relative;
+}
+.card.soldout::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 94px;
+  height: 130px;
+  content: '';
+  border-radius: 10px;
+  background: rgb(0, 0, 0, 0.7) url('./img/Group\ 2.svg') no-repeat center /
+    auto;
+}
+
+.info-btn-set {
+  display: flex;
+  gap: var(--main-gap);
+  width: 100%;
+}
+.info-btn-set:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.info-btn-set > :nth-child(1) {
+  width: 200px;
+  font-size: 14px;
+}
+.info-btn-set > :nth-child(2) {
+  width: 94px;
+  border-radius: var(--main-radius);
+}
+
+.show-money {
+  height: 33px;
+  padding: 6px 10px;
+  background-color: var(--color-light-purple);
+  border-radius: var(--main-radius);
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-money {
+  height: 33px;
+  padding: 6px;
+  border: 1px solid #bdbdbd;
+  border-radius: var(--main-radius);
+}
+
+.input-money::placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+[class$='-obtained'] {
+  border: 1px solid #bdbdbd;
+  padding: 12px 8px 0 12px;
+  background-color: var(--color-light-purple);
+  border-radius: var(--main-radius);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.vending1-obtained {
+  height: 106px;
+}
+
+.obtained-element {
+  width: 100%;
+  padding: 7px 8px 7px 10px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: var(--main-radius);
+}
+
+.obtained-element-img {
+  width: 18px;
+  height: 33px;
+}
+.obtained-element-name {
+  font-size: 10px;
+  padding-left: 10px;
+  line-height: 33px;
+}
+
+.obtained-element-count {
+  float: right;
+  width: 32px;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: var(--main-radius);
+  border: 1px solid #bdbdbd;
+}
+
+[class^='btn-'] {
+  font-size: 13px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+  border-radius: var(--main-radius);
+}
+
+[class^='btn-white-'] {
+  height: 33px;
+}
+
+[class^='btn-white-']:hover {
+  box-shadow: inset 0px 0px 2px 2px var(--color-light-purple);
+}
+[class^='btn-white-']:active {
+  box-shadow: inset 2px 2px 0px 1px var(--color-light-purple);
+}
+
+.btn-obtain {
+  height: 106px;
+  font-weight: 700;
+  background-color: var(--color-purple);
+  color: white;
+}
+
+.btn-obtain:hover {
+  box-shadow: inset 0px 0px 2px 1px var(--color-light-purple);
+}
+.btn-obtain:active {
+  box-shadow: inset 1px 1px 2px 1px var(--color-light-purple);
+}
+
+/* ----- vending2 ----- */
+
+.vending2-top,
+.vending2-bottom {
+  width: 100%;
+  background-color: white;
+}
+
+/* show-money 179줄 */
+.vending2-top {
+  padding: 9px var(--main-padding);
+  margin-bottom: 20px;
+}
+.container-vending2 .show-money > span {
+  font-weight: 700;
+}
+
+.vending2-bottom {
+  padding: 25px var(--main-padding) 27px var(--main-padding);
+}
+
+/* [class$='-obtained'] 200줄 */
+.vending2-obtained {
+  height: 364px;
+}
+.vending2-bottom > span:first-child {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20.3px;
+  margin-bottom: 13px;
+}
+.vending2-bottom > span:last-child {
+  display: block;
+  text-align: end;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: white;
+  }
+
+  .logo img {
+    width: max(166px, calc(100% - 500px));
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    margin-bottom: 17px;
+    align-items: center;
+  }
+  .container-vending1 {
+    background-color: white;
+    padding: 20px var(--main-padding);
+  }
+  .vending2-top {
+    margin-bottom: 0;
+  }
+  .vending2-top {
+    padding: 0px var(--main-padding);
+  }
+}

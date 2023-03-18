@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자판기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1 class="logo">
+    <a href="./"><img src="./img/logo.svg" alt="자판기"></a href="./">
+  </h1>
+
+  <div class="container">
+    <section class="container-vending1">
+      <h2 class="a11y-hidden">자판기 기계</h2>
+      <div class="menu">
+      </div>
+      <div class="info-btn-set">
+        <div class="show-money">잔액 : <span> <span class="show-money-remained">1,000</span> 원</span></div>
+        <button class="btn-white-return">거스름돈 반환</button>
+      </div>
+      <div class="info-btn-set">
+        <input type="number" class="input-money" placeholder="입금액 입력">
+        <button class="btn-white-input">입금</button>
+      </div>
+      <div class="info-btn-set">
+        <div class="vending1-obtained">
+        </div>
+        <button class="btn-obtain">획득</button>
+      </div>
+    </section>
+
+    <section class="container-vending2">
+      <h2 class="a11y-hidden">내 정보</h2>
+      <div class="vending2-top">
+        <div class="show-money">소지금 :
+          <span> <span class="show-money-having"></span> 원</span>
+        </div>
+      </div>
+      <div class="vending2-bottom">
+        <span>획득한 음료</span>
+        <div class="vending2-obtained">
+        </div>
+        <span>총금액 :
+          <span><span class="show-money-total">9,000</span> 원</span>
+        </span>
+      </div>
+
+    </section>
+  </div>
+  <script src="setting.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
