@@ -338,4 +338,7 @@ body {
   .vending2-top {
     padding: 0px var(--main-padding);
   }
+  .input-money::placeholder {
+    text-align: right;
+  }
 }
