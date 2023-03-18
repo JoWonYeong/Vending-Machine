@@ -1,12 +1,6 @@
-// let inputMoney = prompt('소지금을 입력해주세요.');
-let inputMoney = 25000;
 let myInfo = {
-  myMoney: inputMoney,
   myDrinkList: [],
 };
-
-// console.log(myInfo.inputMoney);
-document.querySelector('.show-money-having').innerHTML = inputMoney;
 
 const menu = document.querySelector('.menu');
 
@@ -36,24 +30,25 @@ const menu_list = [
     name: 'Green_Cola',
     img: './img/menu/cola-3.svg',
     price: '2000',
-    stock: 5,
+    stock: 3,
     count: 0,
   },
   {
     name: 'Yellow_Cola',
     img: './img/menu/cola-4.svg',
     price: '2000',
-    stock: 5,
+    stock: 3,
     count: 0,
   },
   {
     name: 'Orange_Cola',
     img: './img/menu/cola-5.svg',
     price: '1000',
-    stock: 5,
+    stock: 3,
     count: 0,
   },
 ];
+console.log('음료수 재고 윗줄: 5개, 밑줄: 3개씩 설정돼있습니다.');
 
 menu_list.forEach((a, i) => {
   // 1. <img> 생성
