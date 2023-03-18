@@ -91,19 +91,18 @@ btn_obtain.addEventListener('click', () => {
     // 1. 획득 리스트 세팅
     vending1_obtained.querySelectorAll('.obtained-element').forEach((a, i) => {
       let newList = 1;
-
       // 이미 획득된 음료인 경우
       myInfo.myDrinkList.forEach((list, i) => {
-        if (parseInt(a.classList[1].substr(-1)) == list.index) {
+        if (a.childNodes[0].childNodes[1].innerText == list.name) {
           newList = 0;
-          list.count += menu_list[list.index].count;
+          list.count += parseInt(a.childNodes[1].innerText);
         }
       });
       // 새로 획득한 음료인 경우
       if (newList) {
         let temp = {};
         menu_list.forEach((list, i) => {
-          if (parseInt(a.classList[1].substr(-1)) == i) {
+          if (a.childNodes[0].childNodes[1].innerText == list.name) {
             temp.name = list.name;
             temp.img = list.img;
             temp.count = list.count;
